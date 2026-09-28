@@ -1,8 +1,9 @@
 import './style.css'
-import {renderAncients} from "./ui.js";
+import {renderAncients, renderDifficulties} from "./ui.js";
 
 const init = () => {
     renderAncients();
+    renderDifficulties();
 }
 
 init();

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
+:root {
+    --section-title-size: 3rem;
+    --section-title-color: #ffffff;
+}
+
 html, body {
     font-size: 10px;
     font-family: 'Inter', sans-serif;
@@ -22,15 +27,17 @@ body {
     min-height: 100vh;
 }
 
+/*SECTION ANCIENTS STARTS HERE:*/
 .section-ancients {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 2rem;
 
     & .section-ancients__title {
-        font-size: 3rem;
-        color: #ffffff;
+        font-size: var(--section-title-size);
+        color: var(--section-title-color);
     }
 
     & .section-ancients__container {
@@ -65,4 +72,53 @@ body {
             }
         }
     }
+}
+
+/*SECTION DIFFICULTIES STARTS HERE:*/
+.section-difficulties {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    & .section-difficulties__title {
+        font-size: var(--section-title-size);
+        color: var(--section-title-color);
+    }
+
+    & .section-difficulties__container {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & .difficulty-button {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            border: 0.2rem solid #4a4a4a;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: #2a2a2a;
+                border-color: #888888;
+                color: #ffffff;
+            }
+
+            &.active {
+                background-color: #332211;
+                border-color: #cc9933;
+                color: #cc9933;
+                box-shadow: 0 0 1.5rem rgba(204, 153, 51, 0.4);
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
 }
