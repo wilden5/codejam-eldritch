@@ -10,14 +10,52 @@
   <div class="wrapper">
     <header></header>
     <main>
+
       <section class="section-ancients">
         <h2 class="section-ancients__title">Выбери Древнего:</h2>
         <div class="section-ancients__container"></div>
       </section>
-      <section class="section-difficulties hidden">
+
+      <section class="section-difficulties">
         <h2 class="section-difficulties__title">Выбери уровень сложности:</h2>
         <div class="section-difficulties__container"></div>
+        <button class="section-difficulties__shuffle-button" disabled>Замешать колоду</button>
       </section>
+
+      <section class="section-gameboard">
+        <div class="section-gameboard__tracker-container">
+          <div class="stage-track" data-stage="1">
+            <h3 class="stage-track__title">Первый этап</h3>
+            <div class="stage-track__dots">
+              <span class="dot dot--green" data-color="green">0</span>
+              <span class="dot dot--brown" data-color="brown">0</span>
+              <span class="dot dot--blue" data-color="blue">0</span>
+            </div>
+          </div>
+          <div class="stage-track" data-stage="2">
+            <h3 class="stage-track__title">Второй этап</h3>
+            <div class="stage-track__dots">
+              <span class="dot dot--green" data-color="green">0</span>
+              <span class="dot dot--brown" data-color="brown">0</span>
+              <span class="dot dot--blue" data-color="blue">0</span>
+            </div>
+          </div>
+          <div class="stage-track" data-stage="3">
+            <h3 class="stage-track__title">Третий этап</h3>
+            <div class="stage-track__dots">
+              <span class="dot dot--green" data-color="green">0</span>
+              <span class="dot dot--brown" data-color="brown">0</span>
+              <span class="dot dot--blue" data-color="blue">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-gameboard__deck-container">
+          <div class="deck-card deck-card--shirt">
+            <img src="./src/assets/mythicCardBackground.png" alt="Карта мифа">
+          </div>
+        </div>
+      </section>
+
     </main>
     <footer></footer>
   </div>

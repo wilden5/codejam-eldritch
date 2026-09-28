@@ -2,7 +2,7 @@
 
 :root {
     --section-title-size: 3rem;
-    --section-title-color: #ffffff;
+    --section-title-color: #fff;
 }
 
 html, body {
@@ -92,6 +92,7 @@ body {
         gap: 1.5rem;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 4rem;
 
         & .difficulty-button {
             padding: 1rem 2rem;
@@ -114,6 +115,117 @@ body {
                 border-color: #cc9933;
                 color: #cc9933;
                 box-shadow: 0 0 1.5rem rgba(204, 153, 51, 0.4);
+            }
+        }
+    }
+
+    & .section-difficulties__shuffle-button {
+        padding: 1.5rem 3rem;
+        font-size: 2rem;
+        background-color: #4a1a1a;
+        color: #ffffff;
+        border: 0.3rem solid #cc9933;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover:not(:disabled) {
+            background-color: #6a2a2a;
+            box-shadow: 0 0 2rem rgba(204, 153, 51, 0.6);
+        }
+
+        &:disabled {
+            background-color: #222;
+            border-color: #444;
+            color: #666;
+            cursor: not-allowed;
+        }
+    }
+}
+
+/*SECTION GAMEBOARD STARTS HERE:*/
+.section-gameboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem;
+    flex-wrap: wrap;
+
+    & .section-gameboard__tracker-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 2rem;
+        border-radius: 1.5rem;
+        border: 0.1rem solid #444;
+
+        & .stage-track {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+
+            & .stage-track__title {
+                color: #fff;
+                font-size: 1.8rem;
+                margin: 0;
+            }
+
+            & .stage-track__dots {
+                display: flex;
+                gap: 1.5rem;
+
+                & .dot {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    color: #fff;
+                    text-shadow: 0.1rem 0.1rem 0.2rem #000;
+                    border: 0.2rem solid rgba(255, 255, 255, 0.4);
+
+                    &.dot--green {
+                        background-color: #2ecc71;
+                        box-shadow: 0 0 1rem rgba(46, 204, 113, 0.4);
+                    }
+
+                    &.dot--brown {
+                        background-color: #8b5a2b;
+                        box-shadow: 0 0 1rem rgba(139, 90, 43, 0.4);
+                    }
+
+                    &.dot--blue {
+                        background-color: #3498db;
+                        box-shadow: 0 0 1rem rgba(52, 152, 219, 0.4);
+                    }
+                }
+            }
+        }
+    }
+
+    & .section-gameboard__deck-container {
+        display: flex;
+        gap: 3rem;
+
+        & .deck-card {
+            width: 22rem;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+
+            & img {
+                width: 100%;
+                height: auto;
+                border-radius: 1.5rem;
+                box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+            }
+
+            &:hover {
+                transform: translateY(-0.5rem);
             }
         }
     }
